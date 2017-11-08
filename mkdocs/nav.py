@@ -178,6 +178,8 @@ class Page(object):
         self.edit_url = None
         if config['repo_url'] and config['edit_uri']:
             self._set_edit_url(config['repo_url'], config['edit_uri'])
+        if 'edit_uri_mappings' in config and self.input_path in config['edit_uri_mappings']:
+            self.edit_url = config['edit_uri_mappings'][self.input_path]
 
         # Placeholders to be filled in later in the build
         # process when we have access to the config.
