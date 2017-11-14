@@ -105,7 +105,7 @@ def serve(config_file=None, dev_addr=None, strict=None, theme=None,
         )
         # Override a few config settings after validation
         config['site_dir'] = tempdir
-        config['site_url'] = 'http://{0}/'.format(config['dev_addr'])
+        # config['site_url'] = 'http://{0}/'.format(config['dev_addr'])
 
         live_server = livereload in ['dirty', 'livereload']
         dirty = livereload == 'dirty'
